@@ -68,27 +68,3 @@ python3 langgraph_builder.py
 
 pytest -q
 
-
-
-prospect-to-lead-workflow-dheeraj/
-│
-├── README.md
-├── workflow.json
-├── langgraph_builder.py
-├── requirements.txt
-├── demo_output.json
-│
-├── agents/
-│   ├── __init__.py
-│   ├── base_agent.py
-│   ├── prospect_search.py
-│   ├── data_enrichment.py
-│   ├── scoring.py
-│   ├── outreach_content.py
-│   ├── outreach_executor.py
-│   ├── response_tracker.py
-│   └── feedback_trainer.py
-│
-└── tests/
-    └── test_pipeline.py
-
