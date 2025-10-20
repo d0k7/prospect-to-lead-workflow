@@ -1,4 +1,3 @@
-# prospect-to-lead-workflow
 
 prospect-to-lead-workflow/
 │
