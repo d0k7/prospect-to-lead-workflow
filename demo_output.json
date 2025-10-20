@@ -1,0 +1,224 @@
+{
+  "prospect_search": {
+    "output": {
+      "leads": [
+        {
+          "company": "Acme SaaS",
+          "contact_name": "Acme Founder",
+          "email": "founder@acmesaas.com",
+          "linkedin": "https://linkedin.com/in/acmesaas",
+          "signal": "hiring_for_sales"
+        },
+        {
+          "company": "Nimbus Analytics",
+          "contact_name": "Nimbus Founder",
+          "email": "founder@nimbusanalytics.com",
+          "linkedin": "https://linkedin.com/in/nimbusanalytics",
+          "signal": "hiring_for_sales"
+        },
+        {
+          "company": "PulseSoft",
+          "contact_name": "PulseSoft Founder",
+          "email": "founder@pulsesoft.com",
+          "linkedin": "https://linkedin.com/in/pulsesoft",
+          "signal": "recent_funding"
+        },
+        {
+          "company": "BrightLayer",
+          "contact_name": "BrightLayer Founder",
+          "email": "founder@brightlayer.com",
+          "linkedin": "https://linkedin.com/in/brightlayer",
+          "signal": "hiring_for_sales"
+        }
+      ]
+    }
+  },
+  "enrichment": {
+    "output": {
+      "enriched_leads": [
+        {
+          "company": "Acme SaaS",
+          "contact_name": "Acme Founder",
+          "email": "founder@acmesaas.com",
+          "linkedin": "https://linkedin.com/in/acmesaas",
+          "signal": "hiring_for_sales",
+          "domain": "acmesaas.com",
+          "title": "Head of GTM",
+          "tech_stack": [
+            "postgres",
+            "segment"
+          ]
+        },
+        {
+          "company": "Nimbus Analytics",
+          "contact_name": "Nimbus Founder",
+          "email": "founder@nimbusanalytics.com",
+          "linkedin": "https://linkedin.com/in/nimbusanalytics",
+          "signal": "hiring_for_sales",
+          "domain": "nimbusanalytics.com",
+          "title": "VP Sales",
+          "tech_stack": [
+            "gcp",
+            "stripe"
+          ]
+        },
+        {
+          "company": "PulseSoft",
+          "contact_name": "PulseSoft Founder",
+          "email": "founder@pulsesoft.com",
+          "linkedin": "https://linkedin.com/in/pulsesoft",
+          "signal": "recent_funding",
+          "domain": "pulsesoft.com",
+          "title": "VP Sales",
+          "tech_stack": [
+            "segment",
+            "gcp"
+          ]
+        },
+        {
+          "company": "BrightLayer",
+          "contact_name": "BrightLayer Founder",
+          "email": "founder@brightlayer.com",
+          "linkedin": "https://linkedin.com/in/brightlayer",
+          "signal": "hiring_for_sales",
+          "domain": "brightlayer.com",
+          "title": "CEO",
+          "tech_stack": [
+            "stripe",
+            "aws"
+          ]
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "output": {
+      "ranked_leads": [
+        {
+          "company": "PulseSoft",
+          "contact_name": "PulseSoft Founder",
+          "email": "founder@pulsesoft.com",
+          "linkedin": "https://linkedin.com/in/pulsesoft",
+          "signal": "recent_funding",
+          "domain": "pulsesoft.com",
+          "title": "VP Sales",
+          "tech_stack": [
+            "segment",
+            "gcp"
+          ],
+          "score": 60
+        },
+        {
+          "company": "Acme SaaS",
+          "contact_name": "Acme Founder",
+          "email": "founder@acmesaas.com",
+          "linkedin": "https://linkedin.com/in/acmesaas",
+          "signal": "hiring_for_sales",
+          "domain": "acmesaas.com",
+          "title": "Head of GTM",
+          "tech_stack": [
+            "postgres",
+            "segment"
+          ],
+          "score": 20
+        },
+        {
+          "company": "Nimbus Analytics",
+          "contact_name": "Nimbus Founder",
+          "email": "founder@nimbusanalytics.com",
+          "linkedin": "https://linkedin.com/in/nimbusanalytics",
+          "signal": "hiring_for_sales",
+          "domain": "nimbusanalytics.com",
+          "title": "VP Sales",
+          "tech_stack": [
+            "gcp",
+            "stripe"
+          ],
+          "score": 20
+        },
+        {
+          "company": "BrightLayer",
+          "contact_name": "BrightLayer Founder",
+          "email": "founder@brightlayer.com",
+          "linkedin": "https://linkedin.com/in/brightlayer",
+          "signal": "hiring_for_sales",
+          "domain": "brightlayer.com",
+          "title": "CEO",
+          "tech_stack": [
+            "stripe",
+            "aws"
+          ],
+          "score": 20
+        }
+      ]
+    }
+  },
+  "outreach_content": {
+    "output": {
+      "messages": [
+        {
+          "lead_company": "PulseSoft",
+          "email_subject": "Quick question about PulseSoft",
+          "email_body": "Hi PulseSoft Founder,\\n\\nI noticed PulseSoft is recent_funding and using segment, gcp. Would you be open to a quick 15-min chat?\\n\\nBest,\\nSDR"
+        },
+        {
+          "lead_company": "Acme SaaS",
+          "email_subject": "Quick question about Acme SaaS",
+          "email_body": "Hi Acme Founder,\\n\\nI noticed Acme SaaS is hiring_for_sales and using postgres, segment. Would you be open to a quick 15-min chat?\\n\\nBest,\\nSDR"
+        },
+        {
+          "lead_company": "Nimbus Analytics",
+          "email_subject": "Quick question about Nimbus Analytics",
+          "email_body": "Hi Nimbus Founder,\\n\\nI noticed Nimbus Analytics is hiring_for_sales and using gcp, stripe. Would you be open to a quick 15-min chat?\\n\\nBest,\\nSDR"
+        },
+        {
+          "lead_company": "BrightLayer",
+          "email_subject": "Quick question about BrightLayer",
+          "email_body": "Hi BrightLayer Founder,\\n\\nI noticed BrightLayer is hiring_for_sales and using stripe, aws. Would you be open to a quick 15-min chat?\\n\\nBest,\\nSDR"
+        }
+      ]
+    }
+  },
+  "outreach_executor": {
+    "output": {
+      "sent": [
+        {
+          "to_company": "PulseSoft",
+          "status": "queued",
+          "subject": "Quick question about PulseSoft"
+        },
+        {
+          "to_company": "Acme SaaS",
+          "status": "queued",
+          "subject": "Quick question about Acme SaaS"
+        },
+        {
+          "to_company": "Nimbus Analytics",
+          "status": "queued",
+          "subject": "Quick question about Nimbus Analytics"
+        },
+        {
+          "to_company": "BrightLayer",
+          "status": "queued",
+          "subject": "Quick question about BrightLayer"
+        }
+      ]
+    }
+  },
+  "response_tracker": {
+    "output": {
+      "metrics": {
+        "opens": 30,
+        "clicks": 4,
+        "replies": 4
+      }
+    }
+  },
+  "feedback_trainer": {
+    "output": {
+      "recommendations": [
+        "Performance looks good \u2014 continue current cadence."
+      ]
+    }
+  }
+}

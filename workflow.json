@@ -1,0 +1,56 @@
+{
+  "workflow_name": "OutboundLeadGeneration",
+  "mode": "live",
+  "description": "Demo pipeline: prospect_search -> enrichment -> scoring -> outreach_content -> outreach_executor -> response_tracker -> feedback_trainer (mock)",
+  "steps": [
+    {
+      "id": "prospect_search",
+      "agent": "ProspectSearchAgent",
+      "inputs": {
+        "icp": {
+          "industry": "SaaS",
+          "location": "USA",
+          "employee_count": {"min": 100, "max": 1000}
+        },
+        "signals": ["recent_funding", "hiring_for_sales"]
+      },
+      "instructions": "Search for companies matching ICP (mock)."
+    },
+    {
+      "id": "enrichment",
+      "agent": "DataEnrichmentAgent",
+      "inputs": {"leads": "{{prospect_search.output.leads}}"},
+      "instructions": "Enrich leads with domain, title, and tech stack (mock)."
+    },
+    {
+      "id": "scoring",
+      "agent": "ScoringAgent",
+      "inputs": {"leads": "{{enrichment.output.enriched_leads}}"},
+      "instructions": "Score and rank leads (mock)."
+    },
+    {
+      "id": "outreach_content",
+      "agent": "OutreachContentAgent",
+      "inputs": {"ranked_leads": "{{scoring.output.ranked_leads}}", "persona": "SDR", "tone": "friendly"},
+      "instructions": "Generate outreach messages (mock)."
+    },
+    {
+      "id": "outreach_executor",
+      "agent": "OutreachExecutorAgent",
+      "inputs": {"messages": "{{outreach_content.output.messages}}"},
+      "instructions": "Send or queue outreach (mock)."
+    },
+    {
+      "id": "response_tracker",
+      "agent": "ResponseTrackerAgent",
+      "inputs": {"sent": "{{outreach_executor.output.sent}}"},
+      "instructions": "Check responses and collect metrics (mock)."
+    },
+    {
+      "id": "feedback_trainer",
+      "agent": "FeedbackTrainerAgent",
+      "inputs": {"metrics": "{{response_tracker.output.metrics}}", "messages": "{{outreach_content.output.messages}}"},
+      "instructions": "Analyze and propose improvements (mock)."
+    }
+  ]
+}
