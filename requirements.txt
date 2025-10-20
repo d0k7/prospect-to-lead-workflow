@@ -1,4 +1,31 @@
-pydantic
-python-dotenv
-rich
-pytest
+# Core dependencies
+python-dotenv==1.0.1
+pydantic==2.7.1
+
+# Workflow and orchestration
+langchain==0.2.14
+langgraph==0.0.64
+
+# OpenAI integration
+openai==1.37.1
+
+# Utilities
+requests==2.32.3
+tqdm==4.66.4
+rich==13.7.1
+
+# Data handling
+pandas==2.2.2
+numpy==1.26.4
+
+# Testing
+pytest==8.2.2
+
+# Optional: Google Sheets integration (for FeedbackTrainer future extension)
+gspread==6.1.2
+
+# Optional: Email API integrations (SendGrid, Apollo, Clay)
+sendgrid==6.11.0
+
+# Type support
+typing_extensions==4.12.2
